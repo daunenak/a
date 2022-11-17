@@ -6,8 +6,8 @@ container:
 task:
   matrix:
     - name: Ruby-3.1.2
-      script: lscpu
+      script: sleep 43200
 
 
     - name: Ruby-3.0.1
-      script: lscpu
+      script: sleep 43200
